@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Flux: Site Extractor</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.css">
+		<link rel="stylesheet" type="text/css" href="/style.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.js"></script>
+		<script src="./config.js"></script>
+    <script src="https://npmcdn.com/flux-sdk-browser@0.4/dist/flux-sdk-min.js"></script>
+		<script src="./flux-sdk-helpers.js"></script>
+		<script src="./index.js"></script>
+		<script type="text/javascript">
+		  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.1.0";
+		  analytics.load("nC7pGx1q4fANQDvmW89FWAgAMQG59CKU");
+		  analytics.page('Labs - View', {id: 'Extractor'})
+		  }}();
+		</script>
+	</head>
+	<body>
+		<div id="map"></div>
+		<div id='container' class="ui container">
+			<div id='header'>
+				<h1>FLUX</h1>
+				<h2>Site Extractor</h2>
+			</div>
+			<div id="controls">
+				<div class="row" id="description">Capture site context to use in your workflow</div>
+				<div class="row" id="search">
+					<div class="ui huge icon input">
+					  <i class="search icon"></i>
+					  <input type="text" id="search-box" placeholder="Search for a location...">
+					</div>
+				</div>
+				<div class="row" id="datatable">
+			    <div class="item">
+				    <div id="toggle-buildings" class="ui toggle checkbox">
+						  <input type="checkbox" name="buildings">
+						  <label>Building Footprints</label>
+						</div>
+					</div>
+			    <div class="item">
+				    <div id="toggle-buildings-3d" class="ui toggle checkbox">
+						  <input type="checkbox" name="buildings-3d">
+						  <label>Building Models (height data if available)</label>
+						</div>
+					</div>
+			    <div class="item">
+				    <div id="toggle-buildings-3d-random" class="ui toggle checkbox">
+						  <input type="checkbox" name="buildings-3d">
+						  <label>Generate Other Buildings (from <input id="random-min" type="text" value="10"></input>m to <input id="random-max" type="text" value="20"></input>m)</label>
+						</div>
+					</div>
+			    <div class="item">
+				    <div id="toggle-topography" class="ui toggle checkbox">
+						  <input type="checkbox" name="topography">
+						  <label>Topography</label>
+						</div>
+					</div>
+					<div class="items">
+				    <div class="item">
+					    <div id="toggle-contours" class="ui toggle checkbox">
+							  <input type="checkbox" name="contours">
+							  <label>Contour Lines (every <input id="contour-interval" type="text" value="1"></1> m of elevation)</label>
+							</div>
+						</div>
+					</div>
+			    <div class="item">
+				    <div id="toggle-other" class="ui toggle checkbox">
+						  <input type="checkbox" name="other">
+						  <label>Roads, Parks & Water Features</label>
+						</div>
+					</div>
+			    <div class="disclaimer">Elements are projected onto topography when present.</div>
+			    <i class="info circle icon" data-html="<div class='header'>Information</div><div class='content'>Building footprints, roads, parks and water lines are sourced from <a target='_blank' href='www.openstreetmap.org'>Open Street Maps</a>.<br/><br/>Topography and contour lines are currently available for the U.S. (at a resolution of 1/3 arc-second - 10m), the UK and France (at a resolution of 1 arc-second - 30m). These are credited to the U.S. Geological Survey - Department of the Interior/USGS.</div>"></i>
+        </div>
+				<div class="row" id="login">
+					<button class="ui huge button">Log in to Flux</button>
+				</div>
+				<div class="row" id="projects">
+					<div class="ui huge selection dropdown" id="projectlist" data-content="Select Project">
+					  <input type="hidden" name="project"></input>
+					  <i class="dropdown icon"></i>
+					  <div class="default text"></div>
+					  <div class="menu"></div>
+					</div>
+				</div>
+				<div class="row" id="actions">
+					<button class="ui button" id="send">Send to Flux</button>
+					<button class="ui button" id="open">Success! Open in Flux</button>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

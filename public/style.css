@@ -1,0 +1,383 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: 700;
+  src: url(./fonts/fat.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: 600;
+  src: url(./fonts/bold.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: 500;
+  src: url(./fonts/regular.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: 400;
+  src: url(./fonts/light.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-weight: 300;
+  src: url(./fonts/thin.woff2) format('woff2');
+}
+
+html {
+  font-family: 'Open Sans';
+  font-size: 14px;
+}
+
+@media only screen  and (min-width : 321px) {
+  html {
+    font-size: 11px;
+  }
+}
+
+@media only screen  and (max-width : 1223px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media only screen  and (min-width : 1224px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+/* Large screens ----------- */
+@media only screen  and (min-width : 1824px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+
+#container.ui.container {
+  border-radius: 4px;
+  box-shadow: 0 1px 8px 1px #bbb;
+  width: 400px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: white;
+  transition: height 0.5s;
+}
+
+#header {
+  background: #0fbfd6;
+  padding: 2rem;
+}
+
+#map {
+  height: 100vh;
+}
+
+#description {
+  text-align: center;
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  padding: 2rem 2rem 0;
+  border-bottom: 0;
+}
+
+#project h2 {
+  float: left;
+  margin-right: 20px;
+}
+
+#coordinates div {
+  width: 99px;
+  border: 0;
+  box-sizing: border-box;
+  padding: 0;
+  line-height: 4rem;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #999;
+  font-weight: 300;
+  float: left;
+}
+
+#coordinates .divider {
+  float: left;
+  line-height: 4rem;
+  width: 1px;
+  padding: 2rem 0;
+  height: 100%;
+  border-left: 1px solid #e8e8e8;
+}
+
+.row {
+  overflow: hidden;
+  width: 100%;
+}
+
+#search .ui.input {
+  width: 100%;
+  float: left;
+}
+
+#projectlist {
+  font-weight: 400;
+  height: 4rem;
+  float: left;
+  width: 100%;
+  font-size: 1.5rem;
+}
+#actions.row {
+  position: relative;
+}
+
+#search.row {
+  padding: 2rem;
+  height: 8rem;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+#projects.row {
+  padding: 2rem 2rem;
+  /*height: 8rem;*/
+  display: inline-block;
+  overflow: visible;
+}
+
+#search-box {
+  font-weight: 400;
+  width: 100%;
+  font-family: 'Open Sans';
+  font-size: 1.5rem;
+}
+
+:focus::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #ccc !important;
+}
+:focus::-moz-placeholder { /* Firefox 19+ */
+  color: #ccc !important;
+}
+:focus:-ms-input-placeholder { /* IE 10+ */
+  color: #ccc !important;
+}
+:focus:-moz-placeholder { /* Firefox 18- */
+  color: #ccc !important;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #ccc !important;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #ccc !important;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #ccc !important;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #ccc !important;
+}
+
+
+#datatable.row {
+  border-bottom: 1px solid #e8e8e8;
+  padding: 2rem 2rem 1rem;
+}
+#datatable .column {
+  width: 50%;
+  float: left;
+  padding: 6px;
+}
+
+#datatable .column .button {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 12px;
+  opacity: 0.7;
+  font-size: 1.2rem;
+}
+
+#header h1, #header h2 {
+  font-weight: 600;
+  font-size: 6rem;
+  text-align: center;
+  color: white;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  /*line-height: 1.2rem;*/
+}
+
+#header h2 {
+  font-weight: 300;
+  font-size: 1.8rem;
+}
+
+.item {
+  width: 100%;
+  /*height: 2.5rem;*/
+  padding: 0.5rem 0;
+}
+
+.items {
+  display: flex;
+  flex-direction: row;
+}
+
+#send.button {
+  width: 100%;
+  font-size: 1.8rem;
+  /*text-transform: uppercase;*/
+  font-weight: 300;
+  background: #f9f9f9;
+  border: 0;
+  transition: background 0.5s;
+  pointer-events: initial;
+  border-radius: 0;
+}
+
+#send.button:hover {
+  background: #f0f0f0;
+}
+
+#send.blue {
+  background-color: #0fbfd6;
+}
+
+#send.button.blue:hover {
+  background: #12d0e5;
+}
+
+.item h4 {
+  float: left;
+  margin: 10px;
+}
+
+#project {
+  background-color: #0fbfd6;
+}
+
+/*
+
+#login {
+  padding: 2rem;
+  border-bottom: 0;
+}
+
+#login .button {
+  background-color: #0fbfd6;
+  text-align: center;
+  width: 100%;
+  color: white;
+}
+*/
+
+.ui.huge.input {
+  float: right;
+  width: 75%;
+}
+
+#login {
+  display: none;
+}
+
+#datatable .item .ui.toggle.checkbox input:checked ~ .box:before, #datatable .item .ui.toggle.checkbox input:checked ~ label:before {
+  background-color: #0fbfd6 !important;
+}
+
+.ui.toggle.checkbox input:checked ~ .box:after, .ui.toggle.checkbox input:checked ~ label:after {
+  left: 1.3rem; 
+}
+.ui.toggle.checkbox .box:after, .ui.toggle.checkbox label:after {
+  margin-top: 0.2rem;
+  width: 1.5rem; 
+  height: 1.5rem; 
+}
+
+.ui.toggle.checkbox .box:before, .ui.toggle.checkbox label:before {
+  margin-top: 0.2rem;
+  width: 2.8rem; 
+  height: 1.5rem; 
+}
+
+.ui.toggle.checkbox input {
+  height: 1.5rem; 
+}
+
+.ui.toggle.checkbox .box, .ui.toggle.checkbox label {
+  min-height: 1.5rem;
+  padding-left: 3.5rem;
+}
+
+.ui.huge.search {
+  width: 100%;
+}
+
+.info {
+  color: #ccc;
+  font-style: italic;
+  font-size: 0.8rem;
+  float: right;
+}
+
+.ui.dropdown .menu .active.item {
+  font-weight: 600;
+}
+
+#open {
+  font-weight: 300;
+  display: none;
+  cursor: pointer;
+  float: right;
+  background: #0fbfd6;
+  width: 100%;
+  font-size: 1.8rem;
+  text-align: center;
+  color: #fff;
+  /*height: 2.5rem;*/
+  top: 0;
+  position: absolute;
+  border-radius: 0;
+}
+
+#open:hover {
+  background: #12d0e5;
+}
+
+.error .popup {
+  background: #ff0000;
+  color: #ffffff;
+}
+
+#random-min, #random-max, #contour-interval {
+  width: 1.8rem;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.disclaimer {
+  color: #aaa;
+  font-style: italic;
+  /*margin-left: 2rem;*/
+  padding-top: 1rem;
+}
+.ui.toggle.checkbox .box, .ui.toggle.checkbox label {
+  color: #aaa !important;
+}
+.ui.toggle.checkbox .box, .ui.toggle.checkbox.checked label {
+  color: #000;
+}
+
+.info.icon {
+  font-size: 1.2rem;
+  top: -1.2rem;
+  position: relative;
+}
+
+.ui.popup {
+  font-size: 1.2rem;
+}
